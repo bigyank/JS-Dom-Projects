@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@font-face {
+  font-family: display;
+  src: url("fonts/Digital7-1e1Z.ttf");
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 150%;
+  line-height: 1.4;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(95, 25, 143);
+  background: linear-gradient(
+    90deg,
+    rgba(95, 25, 143, 1) 0%,
+    rgba(232, 28, 227, 1) 53%,
+    rgba(247, 183, 92, 1) 100%
+  );
+}
+
+.calculator {
+  border-radius: 0.5em;
+  overflow: hidden;
+  -webkit-box-shadow: 12px 10px 5px -3px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: 12px 10px 5px -3px rgba(0, 0, 0, 0.34);
+  box-shadow: 12px 10px 5px -3px rgba(0, 0, 0, 0.34);
+}
+
+.calculator__display {
+  background-color: grey;
+  color: white;
+  width: 18rem;
+  padding: 0.95rem 1rem;
+  text-align: right;
+  font-family: display;
+  font-size: 2rem;
+}
+
+.calculator__keys {
+  background-color: pink;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(4, auto);
+  grid-template-areas:
+    ". . . ."
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero decimal clear equal";
+}
+
+.calculator__keys > button {
+  border: 0;
+  padding: 1.5rem;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.decimal {
+  grid-area: decimal;
+}
+
+.clear {
+  grid-area: clear;
+}
+
+.equal {
+  grid-area: equal;
+  background-color: orange;
+}
+
+[data-type="operator"] {
+  background-color: rgb(202, 193, 193);
+}
+
+[data-type="number"],
+[data-type="clear"] {
+  background-color: aliceblue;
+}
+
+.equal:hover,
+[data-type="operator"]:hover,
+[data-type="number"]:hover,
+[data-type="clear"]:hover {
+  background-color: wheat;
+}
+
+.equal:active,
+[data-type="operator"]:active,
+[data-type="number"]:active,
+[data-type="clear"]:active {
+  background-color: rgb(211, 183, 131);
+}
+
+[data-state="selected"] {
+  background-color: cadetblue;
+}

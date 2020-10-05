@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  color: whitesmoke;
+  font-family: "Piazzolla", serif;
+  background-color: whitesmoke;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  background-size: cover;
+  background-color: #121212;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.sketch__pad {
+  display: grid;
+  gap: 2.5px;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  border: 5px solid black;
+  border-radius: 5px;
+  height: 575px;
+  width: 575px;
+}
+
+.sketch__box {
+  background-color: rgba(245, 237, 237, 0.411);
+  border: none;
+  border-radius: 3px;
+}
+
+.slidecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.slidecontainer span {
+  margin-left: 5px;
+}
+
+.slidecontainer .reset {
+  color: white;
+  font-weight: 800;
+  margin-right: 15px;
+  padding: 5px 20px;
+  border: 2px solid white;
+  border-radius: 0.3vmin;
+  background: linear-gradient(
+    124deg,
+    #ff2400,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3
+  );
+  animation: rainbow 18s ease infinite;
+  background-size: 1800% 1800%;
+}
+@keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+
+.reset:active {
+  transition: 0.5s all ease;
+  transform: scale(1.2);
+}
